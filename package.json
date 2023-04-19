@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "sass": "^1.62.0"
-  }
+  },
+  "name": "fs15_2-responsive-design",
+  "description": "Refer to this [link](https://preview.themeforest.net/item/maido-multipurpose-ghost-blog-theme/full_screen_preview/24837109?_ga=2.259990478.570486835.1654146705-2133876429.1654146705)(see 'Dark version') and create a similar webpage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roniakiola/fs15_2-responsive-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roniakiola/fs15_2-responsive-design/issues"
+  },
+  "homepage": "https://github.com/roniakiola/fs15_2-responsive-design#readme"
 }
