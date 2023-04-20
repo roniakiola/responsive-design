@@ -74,7 +74,11 @@
   font-size: 8px;
   font-weight: bold;
   width: fit-content;
-  background-color: white;
+  background-color: #ebebeb;
+}
+.card__pin p,
+.card__pin a {
+  color: #252530;
 }
 .card__content--top {
   display: flex;
@@ -109,12 +113,16 @@
   .card-big:last-child {
     margin: 0;
   }
+  .card__content--bottom p {
+    display: none;
+  }
 }
 * {
   margin: 0;
   padding: 0;
   font-family: "Courier New", Courier, monospace;
   text-decoration: none;
+  color: #ebebeb;
 }
 
 body {
@@ -149,7 +157,6 @@ nav li a {
   display: flex;
   align-items: center;
   height: 100%;
-  color: #ebebeb;
 }
 
 section {
