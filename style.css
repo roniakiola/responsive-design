@@ -26,37 +26,37 @@
   overflow: hidden;
   overflow-wrap: break-word;
   border-radius: 16px;
-  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") top;
+  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") 50% 15%;
 }
 .card:nth-child(1), .card--big:nth-child(1) {
   grid-area: card1;
 }
 .card:nth-child(1) .card__overlay, .card--big:nth-child(1) .card__overlay {
-  background: rgba(200, 50, 33, 0.2);
+  background: rgba(200, 40, 44, 0.2);
 }
 .card:nth-child(2), .card--big:nth-child(2) {
   grid-area: card2;
 }
 .card:nth-child(2) .card__overlay, .card--big:nth-child(2) .card__overlay {
-  background: rgba(200, 100, 66, 0.2);
+  background: rgba(175, 80, 88, 0.2);
 }
 .card:nth-child(3), .card--big:nth-child(3) {
   grid-area: card3;
 }
 .card:nth-child(3) .card__overlay, .card--big:nth-child(3) .card__overlay {
-  background: rgba(200, 150, 99, 0.2);
+  background: rgba(150, 120, 132, 0.2);
 }
 .card:nth-child(4), .card--big:nth-child(4) {
   grid-area: card4;
 }
 .card:nth-child(4) .card__overlay, .card--big:nth-child(4) .card__overlay {
-  background: rgba(200, 200, 132, 0.2);
+  background: rgba(125, 160, 176, 0.2);
 }
 .card:nth-child(5), .card--big:nth-child(5) {
   grid-area: card5;
 }
 .card:nth-child(5) .card__overlay, .card--big:nth-child(5) .card__overlay {
-  background: rgba(200, 250, 165, 0.2);
+  background: rgba(100, 200, 220, 0.2);
 }
 .card__overlay {
   display: flex;
@@ -64,7 +64,6 @@
   justify-content: space-between;
   padding: 20px;
   height: 100%;
-  background: rgba(255, 0, 0, 0.2);
 }
 .card__pin {
   padding: 5px 7px 5px 9px;
@@ -84,7 +83,16 @@
 .card--big {
   height: 50vh;
   margin: 0 0 50px 0;
-  background-position: center right;
+  background-position: center left;
+}
+.card--big:nth-child(1) .card__overlay {
+  background: rgba(50, 50, 66, 0.4);
+}
+.card--big:nth-child(2) .card__overlay {
+  background: rgba(50, 100, 132, 0.4);
+}
+.card--big:nth-child(3) .card__overlay {
+  background: rgba(50, 150, 198, 0.4);
 }
 .card--big:last-child {
   margin: 0;
