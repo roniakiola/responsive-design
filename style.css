@@ -47,7 +47,7 @@
   font-weight: bold;
   width: fit-content;
   background-color: transparent;
-  border: 1px solid #252530;
+  border: 2px solid #252530;
 }
 .card__pin:hover {
   background-color: #252530;
@@ -90,6 +90,18 @@
   height: 50vh;
   margin: 0 0 50px 0;
 }
+.card--big .card__overlay {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card--big .card__overlay h3 {
+  font-size: 2em;
+  margin: 5px;
+}
+.card--big .card__overlay .card__content--bottom {
+  max-width: 75%;
+}
 .card--big:nth-child(1) .card__overlay {
   background: rgba(50, 50, 66, 0.4);
 }
@@ -111,12 +123,9 @@
   .card, .card--big {
     font-size: smaller;
   }
-  .card-big {
+  .card--big {
     height: 25vh;
     margin: 0 0 5px 0;
-  }
-  .card-big:last-child {
-    margin: 0;
   }
   .card__content--bottom p {
     display: none;
@@ -132,6 +141,7 @@
 
 body {
   background-color: #252530;
+  padding: 0 50px;
 }
 
 header {
@@ -165,8 +175,13 @@ nav li a {
 }
 
 section {
-  padding: 0 5em;
   margin: 3em 0;
+}
+
+small {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
 }
 
 @media only screen and (max-width: 800px) {
