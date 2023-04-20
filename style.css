@@ -118,6 +118,11 @@
   background-position: center;
   background-size: cover;
 }
+.card:hover .arrow, .card--big:hover .arrow {
+  opacity: 100;
+  transition: 0.3s ease-in-out;
+  right: -25px;
+}
 
 @media only screen and (max-width: 800px) {
   .card, .card--big {
@@ -127,10 +132,26 @@
     height: 25vh;
     margin: 0 0 5px 0;
   }
+  .card--big .card__overlay h3 {
+    font-size: 1.5em;
+    margin: 2px;
+  }
   .card__content--bottom p {
     display: none;
   }
 }
+.arrow {
+  position: relative;
+  right: 1000px;
+  border: solid #ebebeb;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  right: 25px;
+  opacity: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -185,7 +206,7 @@ small {
 }
 
 @media only screen and (max-width: 800px) {
-  section {
+  body {
     padding: 0 1em;
   }
 }

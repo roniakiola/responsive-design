@@ -1,0 +1,12 @@
+@use '../variables/colors';
+.arrow {
+  position: relative;
+  right: 1000px;
+  border: solid colors.$primary-light;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  right: 25px;
+  opacity: 0;
+}

@@ -1,7 +1,7 @@
 @use './variables/colors';
 @use './variables/fonts';
 @use './components/card';
-
+@use './components/arrow';
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ small {
 }
 
 @media only screen and (max-width: 800px) {
-  section {
+  body {
     padding: 0 1em;
   }
 }

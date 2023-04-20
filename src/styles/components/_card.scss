@@ -77,6 +77,11 @@
   &:hover {
     background-position: center;
     background-size: cover;
+    .arrow {
+      opacity: 100;
+      transition: 0.3s ease-in-out;
+      right: -25px;
+    }
   }
 }
 @media only screen and (max-width: 800px) {
@@ -86,6 +91,12 @@
   .card--big {
     height: 25vh;
     margin: 0 0 5px 0;
+    .card__overlay {
+      h3 {
+        font-size: 1.5em;
+        margin: 2px;
+      }
+    }
   }
   .card__content--bottom p {
     display: none;
