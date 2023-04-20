@@ -8,7 +8,8 @@
   overflow-wrap: break-word;
   border-radius: 16px;
   background: url('../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg')
-    fixed center;
+    fixed no-repeat;
+  background-size: cover;
   &__overlay {
     display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@
     @extend .card;
     height: 50vh;
     margin: 0 0 50px 0;
-    background-position: center left;
+    // background-position: center left;
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
         .card__overlay {

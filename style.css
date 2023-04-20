@@ -26,7 +26,8 @@
   overflow: hidden;
   overflow-wrap: break-word;
   border-radius: 16px;
-  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed center;
+  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed no-repeat;
+  background-size: cover;
 }
 .card__overlay {
   display: flex;
@@ -87,7 +88,6 @@
 .card--big {
   height: 50vh;
   margin: 0 0 50px 0;
-  background-position: center left;
 }
 .card--big:nth-child(1) .card__overlay {
   background: rgba(50, 50, 66, 0.4);
