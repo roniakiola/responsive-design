@@ -28,6 +28,7 @@
   border-radius: 16px;
   background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed no-repeat;
   background-size: cover;
+  transition: 0.3s ease-in-out;
 }
 .card__overlay {
   display: flex;
@@ -102,7 +103,8 @@
   margin: 0;
 }
 .card:hover, .card--big:hover {
-  background-size: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 800px) {

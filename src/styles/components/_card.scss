@@ -10,6 +10,7 @@
   background: url('../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg')
     fixed no-repeat;
   background-size: cover;
+  transition: 0.3s ease-in-out;
   &__overlay {
     display: flex;
     flex-direction: column;
@@ -62,7 +63,8 @@
     }
   }
   &:hover {
-    background-size: 100%;
+    background-position: center;
+    background-size: cover;
   }
 }
 @media only screen and (max-width: 800px) {
