@@ -91,7 +91,7 @@
       &:nth-child(#{$i}) {
         grid-area: card#{$i};
         .card__overlay {
-          background: rgba(50 - 25 * $i, $i * 15, $i * 15, 0.4);
+          background: rgba(15 - 3 * $i, $i * 30, $i * 15, 0.4);
         }
       }
     }

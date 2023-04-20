@@ -1,0 +1,52 @@
+@use '../variables/colors';
+@use '../variables/fonts';
+
+.email-form {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  form {
+    max-width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 3em;
+      margin: 0 0 50px 0;
+    }
+    .typewriter {
+      font-size: 1.5em;
+      margin: 0 0 50px 0;
+    }
+    input {
+      margin: 0 0 50px 0;
+      width: 50%;
+      background-color: colors.$primary-dark;
+      border: none;
+      border-bottom: solid 2px colors.$primary-light;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+      font-size: larger;
+      &:focus {
+        width: 75%;
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      padding: 30px 15px;
+      border-radius: 16px;
+      background-color: colors.$secondary-dark;
+      &:hover {
+        color: colors.$secondary-dark;
+        background-color: colors.$primary-light;
+      }
+    }
+  }
+}
