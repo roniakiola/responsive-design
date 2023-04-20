@@ -43,7 +43,7 @@ section {
   padding: 0 5em;
   margin: 3em 0;
 }
-.container-small {
+.container--small {
   min-height: 40vh;
   display: grid;
   gap: 15px;
@@ -68,7 +68,7 @@ section {
 .card:nth-child(5) {
   grid-area: card5;
 }
-.container-big {
+.container--big {
   display: flex;
   flex-direction: column;
 }
@@ -76,7 +76,7 @@ section {
   section {
     padding: 0 1em;
   }
-  .container-small {
+  .container--small {
     gap: 5px;
     grid-template-areas:
       'card1 card2'
