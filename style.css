@@ -26,7 +26,33 @@
   overflow: hidden;
   overflow-wrap: break-word;
   border-radius: 16px;
-  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") 50% 15%;
+  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed center;
+}
+.card__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+}
+.card__pin {
+  padding: 5px 7px 5px 9px;
+  margin: 0 10px 0 0;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: bold;
+  width: fit-content;
+  background-color: #ebebeb;
+}
+.card__pin p,
+.card__pin a {
+  color: #252530;
+}
+.card__content--top {
+  display: flex;
+  flex-direction: row;
 }
 .card:nth-child(1), .card--big:nth-child(1) {
   grid-area: card1;
@@ -58,32 +84,6 @@
 .card:nth-child(5) .card__overlay, .card--big:nth-child(5) .card__overlay {
   background: rgba(100, 200, 220, 0.2);
 }
-.card__overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  height: 100%;
-}
-.card__pin {
-  padding: 5px 7px 5px 9px;
-  margin: 0 10px 0 0;
-  border-radius: 25px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 8px;
-  font-weight: bold;
-  width: fit-content;
-  background-color: #ebebeb;
-}
-.card__pin p,
-.card__pin a {
-  color: #252530;
-}
-.card__content--top {
-  display: flex;
-  flex-direction: row;
-}
 .card--big {
   height: 50vh;
   margin: 0 0 50px 0;
@@ -100,6 +100,9 @@
 }
 .card--big:last-child {
   margin: 0;
+}
+.card:hover, .card--big:hover {
+  background-size: 100%;
 }
 
 @media only screen and (max-width: 800px) {

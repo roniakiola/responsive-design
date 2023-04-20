@@ -8,16 +8,7 @@
   overflow-wrap: break-word;
   border-radius: 16px;
   background: url('../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg')
-    50% 15%;
-  //for loop to place items on grid and giving mask color
-  @for $i from 1 through 5 {
-    &:nth-child(#{$i}) {
-      grid-area: card#{$i};
-      .card__overlay {
-        background: rgba(225 - 25 * $i, $i * 40, $i * 44, 0.2);
-      }
-    }
-  }
+    fixed center;
   &__overlay {
     display: flex;
     flex-direction: column;
@@ -44,6 +35,15 @@
     display: flex;
     flex-direction: row;
   }
+  //for loop to place items on grid and giving mask color
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      grid-area: card#{$i};
+      .card__overlay {
+        background: rgba(225 - 25 * $i, $i * 40, $i * 44, 0.2);
+      }
+    }
+  }
   &--big {
     @extend .card;
     height: 50vh;
@@ -59,6 +59,9 @@
     &:last-child {
       margin: 0;
     }
+  }
+  &:hover {
+    background-size: 100%;
   }
 }
 @media only screen and (max-width: 800px) {
