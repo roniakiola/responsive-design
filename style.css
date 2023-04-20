@@ -12,7 +12,7 @@
   flex-direction: column;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container--small {
     gap: 5px;
     grid-template-areas: "card1 card2" "card1 card3" "card1 card4" "card1 card5";
@@ -102,7 +102,7 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .card, .card--big {
     font-size: smaller;
   }
@@ -164,7 +164,7 @@ section {
   margin: 3em 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   section {
     padding: 0 1em;
   }

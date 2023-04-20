@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container--small {
     gap: 5px;
     grid-template-areas:
