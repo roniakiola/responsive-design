@@ -24,13 +24,14 @@
     border-radius: 25px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     width: fit-content;
-    background-color: colors.$primary-light;
-    p,
-    a {
-      color: colors.$primary-dark;
+    background-color: transparent;
+    border: 1px solid colors.$primary-dark;
+
+    &:hover {
+      background-color: colors.$primary-dark;
     }
   }
   &__content--top {
@@ -42,7 +43,7 @@
     &:nth-child(#{$i}) {
       grid-area: card#{$i};
       .card__overlay {
-        background: rgba(225 - 25 * $i, $i * 40, $i * 44, 0.2);
+        background: rgba(225 - 25 * $i, $i * 15, $i * 15, 0.4);
       }
     }
   }
@@ -50,7 +51,6 @@
     @extend .card;
     height: 50vh;
     margin: 0 0 50px 0;
-    // background-position: center left;
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
         .card__overlay {
