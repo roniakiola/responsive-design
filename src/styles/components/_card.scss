@@ -1,13 +1,30 @@
+@use './container';
+
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
-  padding: 20px;
+  overflow-wrap: break-word;
   border-radius: 16px;
-  background-color: pink;
   background: url('../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg')
     top;
+  //for loop to place items on grid and giving mask color
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      grid-area: card#{$i};
+      .card__overlay {
+        background: rgba(200, $i * 50, $i * 33, 0.2);
+      }
+    }
+  }
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.2);
+  }
   &__pin {
     padding: 5px 7px 5px 9px;
     margin: 0 10px 0 0;
@@ -34,6 +51,9 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .card {
+    font-size: smaller;
+  }
   .card-big {
     height: 25vh;
     margin: 0 0 5px 0;

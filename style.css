@@ -1,12 +1,70 @@
+.container--small {
+  min-height: 40vh;
+  display: grid;
+  gap: 15px;
+  grid-template-areas: "card1 card2 card3" "card1 card4 card5";
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(auto, 1fr));
+}
+
+.container--big {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .container--small {
+    gap: 5px;
+    grid-template-areas: "card1 card2" "card1 card3" "card1 card4" "card1 card5";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(auto, 1fr));
+  }
+}
 .card, .card--big {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
-  padding: 20px;
+  overflow-wrap: break-word;
   border-radius: 16px;
-  background-color: pink;
   background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") top;
+}
+.card:nth-child(1), .card--big:nth-child(1) {
+  grid-area: card1;
+}
+.card:nth-child(1) .card__overlay, .card--big:nth-child(1) .card__overlay {
+  background: rgba(200, 50, 33, 0.2);
+}
+.card:nth-child(2), .card--big:nth-child(2) {
+  grid-area: card2;
+}
+.card:nth-child(2) .card__overlay, .card--big:nth-child(2) .card__overlay {
+  background: rgba(200, 100, 66, 0.2);
+}
+.card:nth-child(3), .card--big:nth-child(3) {
+  grid-area: card3;
+}
+.card:nth-child(3) .card__overlay, .card--big:nth-child(3) .card__overlay {
+  background: rgba(200, 150, 99, 0.2);
+}
+.card:nth-child(4), .card--big:nth-child(4) {
+  grid-area: card4;
+}
+.card:nth-child(4) .card__overlay, .card--big:nth-child(4) .card__overlay {
+  background: rgba(200, 200, 132, 0.2);
+}
+.card:nth-child(5), .card--big:nth-child(5) {
+  grid-area: card5;
+}
+.card:nth-child(5) .card__overlay, .card--big:nth-child(5) .card__overlay {
+  background: rgba(200, 250, 165, 0.2);
+}
+.card__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.2);
 }
 .card__pin {
   padding: 5px 7px 5px 9px;
@@ -33,6 +91,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .card, .card--big {
+    font-size: smaller;
+  }
   .card-big {
     height: 25vh;
     margin: 0 0 5px 0;
@@ -88,49 +149,9 @@ section {
   margin: 3em 0;
 }
 
-.container--small {
-  min-height: 40vh;
-  display: grid;
-  gap: 15px;
-  grid-template-areas: "card1 card2 card3" "card1 card4 card5";
-  grid-template-columns: 1.5fr 1fr 1fr;
-  grid-template-rows: repeat(2, minmax(auto, 1fr));
-}
-
-.card:nth-child(1) {
-  grid-area: card1;
-}
-
-.card:nth-child(2) {
-  grid-area: card2;
-}
-
-.card:nth-child(3) {
-  grid-area: card3;
-}
-
-.card:nth-child(4) {
-  grid-area: card4;
-}
-
-.card:nth-child(5) {
-  grid-area: card5;
-}
-
-.container--big {
-  display: flex;
-  flex-direction: column;
-}
-
 @media only screen and (max-width: 600px) {
   section {
     padding: 0 1em;
-  }
-  .container--small {
-    gap: 5px;
-    grid-template-areas: "card1 card2" "card1 card3" "card1 card4" "card1 card5";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, minmax(auto, 1fr));
   }
 }
 
