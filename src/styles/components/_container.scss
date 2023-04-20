@@ -12,6 +12,14 @@
   display: flex;
   flex-direction: column;
 }
+.container--medium {
+  min-height: 40vh;
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    'card1 card1 card1 card2 card2 card2'
+    'card3 card3 card4 card4 card5 card5';
+}
 @media only screen and (max-width: 800px) {
   .container--small {
     gap: 5px;
@@ -22,5 +30,22 @@
       'card1 card5';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, minmax(auto, 1fr));
+  }
+  .container--medium {
+    gap: 5px;
+    grid-template-areas:
+      'card1 card2'
+      'card3 card4'
+      'card5 card5';
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container--medium {
+    grid-template-areas:
+      'card1'
+      'card2'
+      'card3'
+      'card4'
+      'card5';
   }
 }

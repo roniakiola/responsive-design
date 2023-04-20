@@ -38,6 +38,15 @@
     display: flex;
     flex-direction: row;
   }
+  &:hover {
+    background-position: center;
+    background-size: cover;
+    .arrow {
+      opacity: 100;
+      transition: 0.3s ease-in-out;
+      right: -25px;
+    }
+  }
   //for loop to place items on grid and giving mask color
   @for $i from 1 through 5 {
     &:nth-child(#{$i}) {
@@ -74,13 +83,17 @@
       margin: 0;
     }
   }
-  &:hover {
-    background-position: center;
-    background-size: cover;
-    .arrow {
-      opacity: 100;
-      transition: 0.3s ease-in-out;
-      right: -25px;
+  &--medium {
+    @extend .card--big;
+    margin: 0px;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        grid-area: card#{$i};
+        .card__overlay {
+          background: rgba(50 - 25 * $i, $i * 15, $i * 15, 0.4);
+        }
+      }
     }
   }
 }
@@ -97,6 +110,9 @@
         margin: 2px;
       }
     }
+  }
+  .card--medium {
+    margin: 0;
   }
   .card__content--bottom p {
     display: none;

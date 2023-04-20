@@ -12,6 +12,13 @@
   flex-direction: column;
 }
 
+.container--medium {
+  min-height: 40vh;
+  display: grid;
+  gap: 15px;
+  grid-template-areas: "card1 card1 card1 card2 card2 card2" "card3 card3 card4 card4 card5 card5";
+}
+
 @media only screen and (max-width: 800px) {
   .container--small {
     gap: 5px;
@@ -19,8 +26,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, minmax(auto, 1fr));
   }
+  .container--medium {
+    gap: 5px;
+    grid-template-areas: "card1 card2" "card3 card4" "card5 card5";
+  }
 }
-.card, .card--big {
+@media only screen and (max-width: 600px) {
+  .container--medium {
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5";
+  }
+}
+.card, .card--big, .card--medium {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -56,85 +72,121 @@
   display: flex;
   flex-direction: row;
 }
-.card:nth-child(1), .card--big:nth-child(1) {
-  grid-area: card1;
-}
-.card:nth-child(1) .card__overlay, .card--big:nth-child(1) .card__overlay {
-  background: rgba(200, 15, 15, 0.4);
-}
-.card:nth-child(2), .card--big:nth-child(2) {
-  grid-area: card2;
-}
-.card:nth-child(2) .card__overlay, .card--big:nth-child(2) .card__overlay {
-  background: rgba(175, 30, 30, 0.4);
-}
-.card:nth-child(3), .card--big:nth-child(3) {
-  grid-area: card3;
-}
-.card:nth-child(3) .card__overlay, .card--big:nth-child(3) .card__overlay {
-  background: rgba(150, 45, 45, 0.4);
-}
-.card:nth-child(4), .card--big:nth-child(4) {
-  grid-area: card4;
-}
-.card:nth-child(4) .card__overlay, .card--big:nth-child(4) .card__overlay {
-  background: rgba(125, 60, 60, 0.4);
-}
-.card:nth-child(5), .card--big:nth-child(5) {
-  grid-area: card5;
-}
-.card:nth-child(5) .card__overlay, .card--big:nth-child(5) .card__overlay {
-  background: rgba(100, 75, 75, 0.4);
-}
-.card--big {
-  height: 50vh;
-  margin: 0 0 50px 0;
-}
-.card--big .card__overlay {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.card--big .card__overlay h3 {
-  font-size: 2em;
-  margin: 5px;
-}
-.card--big .card__overlay .card__content--bottom {
-  max-width: 75%;
-}
-.card--big:nth-child(1) .card__overlay {
-  background: rgba(50, 50, 66, 0.4);
-}
-.card--big:nth-child(2) .card__overlay {
-  background: rgba(50, 100, 132, 0.4);
-}
-.card--big:nth-child(3) .card__overlay {
-  background: rgba(50, 150, 198, 0.4);
-}
-.card--big:last-child {
-  margin: 0;
-}
-.card:hover, .card--big:hover {
+.card:hover, .card--big:hover, .card--medium:hover {
   background-position: center;
   background-size: cover;
 }
-.card:hover .arrow, .card--big:hover .arrow {
+.card:hover .arrow, .card--big:hover .arrow, .card--medium:hover .arrow {
   opacity: 100;
   transition: 0.3s ease-in-out;
   right: -25px;
 }
+.card:nth-child(1), .card--big:nth-child(1), .card--medium:nth-child(1) {
+  grid-area: card1;
+}
+.card:nth-child(1) .card__overlay, .card--big:nth-child(1) .card__overlay, .card--medium:nth-child(1) .card__overlay {
+  background: rgba(200, 15, 15, 0.4);
+}
+.card:nth-child(2), .card--big:nth-child(2), .card--medium:nth-child(2) {
+  grid-area: card2;
+}
+.card:nth-child(2) .card__overlay, .card--big:nth-child(2) .card__overlay, .card--medium:nth-child(2) .card__overlay {
+  background: rgba(175, 30, 30, 0.4);
+}
+.card:nth-child(3), .card--big:nth-child(3), .card--medium:nth-child(3) {
+  grid-area: card3;
+}
+.card:nth-child(3) .card__overlay, .card--big:nth-child(3) .card__overlay, .card--medium:nth-child(3) .card__overlay {
+  background: rgba(150, 45, 45, 0.4);
+}
+.card:nth-child(4), .card--big:nth-child(4), .card--medium:nth-child(4) {
+  grid-area: card4;
+}
+.card:nth-child(4) .card__overlay, .card--big:nth-child(4) .card__overlay, .card--medium:nth-child(4) .card__overlay {
+  background: rgba(125, 60, 60, 0.4);
+}
+.card:nth-child(5), .card--big:nth-child(5), .card--medium:nth-child(5) {
+  grid-area: card5;
+}
+.card:nth-child(5) .card__overlay, .card--big:nth-child(5) .card__overlay, .card--medium:nth-child(5) .card__overlay {
+  background: rgba(100, 75, 75, 0.4);
+}
+.card--big, .card--medium {
+  height: 50vh;
+  margin: 0 0 50px 0;
+}
+.card--big .card__overlay, .card--medium .card__overlay {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card--big .card__overlay h3, .card--medium .card__overlay h3 {
+  font-size: 2em;
+  margin: 5px;
+}
+.card--big .card__overlay .card__content--bottom, .card--medium .card__overlay .card__content--bottom {
+  max-width: 75%;
+}
+.card--big:nth-child(1) .card__overlay, .card--medium:nth-child(1) .card__overlay {
+  background: rgba(50, 50, 66, 0.4);
+}
+.card--big:nth-child(2) .card__overlay, .card--medium:nth-child(2) .card__overlay {
+  background: rgba(50, 100, 132, 0.4);
+}
+.card--big:nth-child(3) .card__overlay, .card--medium:nth-child(3) .card__overlay {
+  background: rgba(50, 150, 198, 0.4);
+}
+.card--big:last-child, .card--medium:last-child {
+  margin: 0;
+}
+.card--medium {
+  margin: 0px;
+}
+.card--medium:nth-child(1) {
+  grid-area: card1;
+}
+.card--medium:nth-child(1) .card__overlay {
+  background: rgba(25, 15, 15, 0.4);
+}
+.card--medium:nth-child(2) {
+  grid-area: card2;
+}
+.card--medium:nth-child(2) .card__overlay {
+  background: rgba(0, 30, 30, 0.4);
+}
+.card--medium:nth-child(3) {
+  grid-area: card3;
+}
+.card--medium:nth-child(3) .card__overlay {
+  background: rgba(0, 45, 45, 0.4);
+}
+.card--medium:nth-child(4) {
+  grid-area: card4;
+}
+.card--medium:nth-child(4) .card__overlay {
+  background: rgba(0, 60, 60, 0.4);
+}
+.card--medium:nth-child(5) {
+  grid-area: card5;
+}
+.card--medium:nth-child(5) .card__overlay {
+  background: rgba(0, 75, 75, 0.4);
+}
 
 @media only screen and (max-width: 800px) {
-  .card, .card--big {
+  .card, .card--big, .card--medium {
     font-size: smaller;
   }
-  .card--big {
+  .card--big, .card--medium {
     height: 25vh;
     margin: 0 0 5px 0;
   }
-  .card--big .card__overlay h3 {
+  .card--big .card__overlay h3, .card--medium .card__overlay h3 {
     font-size: 1.5em;
     margin: 2px;
+  }
+  .card--medium {
+    margin: 0;
   }
   .card__content--bottom p {
     display: none;
