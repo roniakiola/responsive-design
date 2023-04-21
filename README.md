@@ -47,4 +47,4 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
 ## Getting started
 
 Use <code>git clone</code> or <br>
-visit: https://users.metropolia.fi/~roniak/integrify/Frontend/fs15_2-responsive-design/
+visit: https://6442a054b4b80e023638598d--aquamarine-sfogliatella-759585.netlify.app/
