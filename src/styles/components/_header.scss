@@ -25,23 +25,28 @@ header {
         display: flex;
         align-items: center;
         height: 100%;
-        &:hover::before {
-          content: '';
-          height: 10px;
-          width: 10px;
-          border-radius: 50%;
-          background-color: colors.$secondary-dark;
-          position: absolute;
-          top: 45px;
+        @media only screen and (min-width: 800px) {
+          &:hover::before {
+            content: '';
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: colors.$secondary-dark;
+            position: absolute;
+            top: 45px;
+          }
+          &:focus::after {
+            content: '';
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 45px;
+            background-color: orange;
+          }
         }
-        &:focus::after {
-          content: '';
-          height: 10px;
-          width: 10px;
-          border-radius: 50%;
-          position: absolute;
-          top: 45px;
-          background-color: orange;
+        .fa-solid {
+          margin-left: 10px;
         }
       }
     }
@@ -70,11 +75,7 @@ header {
         &:last-child {
           background-color: colors.$primary-light;
           a {
-            &::before {
-              color: colors.$primary-dark;
-              content: 'Search';
-              margin: 0 10px 0 0;
-            }
+            color: colors.$primary-dark;
             i {
               color: colors.$primary-dark;
             }

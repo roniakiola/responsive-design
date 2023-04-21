@@ -284,23 +284,28 @@ header nav li a {
   align-items: center;
   height: 100%;
 }
-header nav li a:hover::before {
-  content: "";
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  background-color: #424249;
-  position: absolute;
-  top: 45px;
+@media only screen and (min-width: 800px) {
+  header nav li a:hover::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #424249;
+    position: absolute;
+    top: 45px;
+  }
+  header nav li a:focus::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    background-color: orange;
+  }
 }
-header nav li a:focus::after {
-  content: "";
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  position: absolute;
-  top: 45px;
-  background-color: orange;
+header nav li a .fa-solid {
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -329,10 +334,8 @@ header nav li a:focus::after {
   header nav ul li:last-child {
     background-color: #ebebeb;
   }
-  header nav ul li:last-child a::before {
+  header nav ul li:last-child a {
     color: #252530;
-    content: "Search";
-    margin: 0 10px 0 0;
   }
   header nav ul li:last-child a i {
     color: #252530;
