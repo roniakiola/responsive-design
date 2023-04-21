@@ -1,0 +1,21 @@
+@use '../variables/colors';
+
+footer {
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+      margin-bottom: 5px;
+      li {
+        padding: 5px;
+      }
+    }
+  }
+  p {
+    font-size: smaller;
+    color: colors.$secondary-dark;
+    margin-bottom: 5px;
+  }
+}
