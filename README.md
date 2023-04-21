@@ -15,7 +15,7 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
 - SASS
 
 ## Project structure
-
+```bash
   │   .gitignore
   │   index.html
   │   package-lock.json
@@ -42,6 +42,7 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
           └───variables
                   _colors.scss
                   _fonts.scss
+                  ```
 
 ## Getting started
 
