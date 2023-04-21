@@ -16,32 +16,32 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
 
 ## Project structure
 
-│ .gitignore
-│ index.html
-│ package-lock.json
-│ package.json
-│ README.md
-│ style.css
-│ style.css.map
+│   .gitignore
+│   index.html
+│   package-lock.json
+│   package.json
+│   README.md
+│   style.css
+│   style.css.map
 │
 └───src
-├───assets
-│ dawid-zawila--G3rw6Y02D0-unsplash.jpg
-│
-└───styles
-│ style.scss
-│
-├───components
-│ \_arrow.scss
-│ \_card.scss
-│ \_container.scss
-│ \_footer.scss
-│ \_form.scss
-│ \_header.scss
-│
-└───variables
-\_colors.scss
-\_fonts.scss
+    ├───assets
+    │       dawid-zawila--G3rw6Y02D0-unsplash.jpg
+    │
+    └───styles
+        │   style.scss
+        │
+        ├───components
+        │       _arrow.scss
+        │       _card.scss
+        │       _container.scss
+        │       _footer.scss
+        │       _form.scss
+        │       _header.scss
+        │
+        └───variables
+                _colors.scss
+                _fonts.scss
 
 ## Getting started
 
