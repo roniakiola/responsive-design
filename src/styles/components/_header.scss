@@ -42,7 +42,7 @@ header {
             border-radius: 50%;
             position: absolute;
             top: 45px;
-            background-color: orange;
+            background-color: colors.$primary-accent;
           }
         }
         .fa-solid {
@@ -70,12 +70,22 @@ header {
         display: flex;
         justify-content: right;
         a {
+          display: flex;
+          justify-content: right;
+          width: 100%;
           padding: 15px 15px 15px 75px;
+          &:hover {
+            background-color: colors.$primary-accent;
+          }
         }
         &:last-child {
           background-color: colors.$primary-light;
           a {
             color: colors.$primary-dark;
+            &::before {
+              content: 'Search';
+            }
+
             i {
               color: colors.$primary-dark;
             }
@@ -103,6 +113,8 @@ header {
     }
     &--close {
       @extend .burger-menu;
+      left: 30px;
+      position: relative;
       margin: 15px 15px 15px 0;
       .bar1 {
         transform: rotate(-45deg);

@@ -1,6 +1,10 @@
 @use '../variables/colors';
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
   nav {
     ul {
       display: flex;
@@ -10,12 +14,14 @@ footer {
       margin-bottom: 5px;
       li {
         padding: 5px;
+        a:hover {
+          color: colors.$primary-accent;
+        }
       }
     }
   }
   p {
     font-size: smaller;
     color: colors.$secondary-dark;
-    margin-bottom: 5px;
   }
 }

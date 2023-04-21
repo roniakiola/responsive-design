@@ -21,6 +21,30 @@
     .typewriter {
       font-size: 1.5em;
       margin: 0 0 50px 0;
+      overflow: hidden;
+      border-right: 0.15em solid colors.$primary-accent;
+      white-space: nowrap;
+      // margin: 0 auto;
+      animation: typing 5s steps(40) alternate infinite,
+        blink-caret 0.75s step-end infinite;
+
+      @keyframes typing {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 15em;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: colors.$primary-accent;
+        }
+      }
     }
     input {
       margin: 0 0 50px 0;
@@ -38,6 +62,7 @@
     }
     button {
       border: none;
+      font-weight: bold;
       font-size: 1.5em;
       text-transform: uppercase;
       padding: 30px 15px;
@@ -45,7 +70,7 @@
       background-color: colors.$secondary-dark;
       &:hover {
         color: colors.$secondary-dark;
-        background-color: colors.$primary-light;
+        background-color: colors.$primary-accent;
       }
     }
   }
@@ -53,5 +78,8 @@
 @media only screen and (max-width: 800px) {
   .email-form h2 {
     font-size: 1.5em;
+  }
+  .email-form__wrapper .typewriter {
+    font-size: 1em;
   }
 }
