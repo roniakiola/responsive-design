@@ -25,7 +25,7 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
   │   style.css.map
   │
   └───src
-      ├───assets
+      ├───img
       │       dawid-zawila--G3rw6Y02D0-unsplash.jpg
       │
       └───styles
