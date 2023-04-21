@@ -41,7 +41,7 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
         │
         └───variables
                 _colors.scss
-                _fonts.scss
+                _fonts.scs
 
 ## Getting started
 
