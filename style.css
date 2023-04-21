@@ -42,7 +42,7 @@
   overflow: hidden;
   overflow-wrap: break-word;
   border-radius: 16px;
-  background: url("../../../src/assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed no-repeat;
+  background: url("../../src/img/dawid-zawila--G3rw6Y02D0-unsplash.jpg") fixed no-repeat;
   background-size: cover;
   transition: 0.3s ease-in-out;
 }
@@ -412,8 +412,9 @@ header nav li a .fa-solid {
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 20vh;
+  margin-bottom: 15px;
 }
 footer nav ul {
   display: flex;
