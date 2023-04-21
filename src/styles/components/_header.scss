@@ -1,0 +1,39 @@
+@use '../variables/colors';
+header {
+  // padding: 10px;
+  margin: 50px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+
+  .brand a img {
+    max-height: 2em;
+  }
+
+  nav {
+    display: flex;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
+    li {
+      // display: flex;
+      margin: 0 10px;
+      // align-items: center;
+      color: colors.$primary-light;
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &:hover::after {
+          content: '';
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+          background-color: orange;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
