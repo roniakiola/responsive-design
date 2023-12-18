@@ -47,4 +47,4 @@ This project was built with HTML and SASS, using Grid, Flexbox and Sass variable
 ## Getting started
 
 Use <code>git clone</code> or <br>
-visit: https://6442a054b4b80e023638598d--aquamarine-sfogliatella-759585.netlify.app/
+visit: https://aquamarine-sfogliatella-759585.netlify.app/
